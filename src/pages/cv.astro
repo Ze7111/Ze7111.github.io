@@ -1,0 +1,45 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import { Image } from "astro:assets";
+import blur from "/src/assets/img/core/bg.png";
+import Button from "@/components/Button.astro";
+import PDFView from "@/components/PDFView.astro";
+
+export const prerender = true;
+
+// its at public/DhruvanKartikCV.pdf
+// this file is at src/pages/cv.astro
+const pdfPath = "/DhruvanKartikCV.pdf";
+const gitRawLink =
+	"https://raw.githubusercontent.com/Ze7111/ze7111.github.io/main/DhruvanKartikCV.pdf";
+---
+
+<Head title="CV" />
+<Layout class="relative">
+	<div class="grid mt-[11.1111%] content-center">
+		<Title text="Resume" />
+		<div style="padding-top: 4rem;">
+			<PDFView file={pdfPath} />
+		</div>
+		<div class="flex justify-center" style="padding-top: 3rem;">
+			<Button link={gitRawLink} text="Download CV" target="_blank" iconType="download" />
+		</div>
+	</div>
+	<section class="relative">
+		<Image
+			src={blur}
+			class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+			alt="blur background"
+		/>
+	</section>
+</Layout>
+
+<style>
+	.pdf-container {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+</style>

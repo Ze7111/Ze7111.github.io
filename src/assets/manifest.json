@@ -1,0 +1,128 @@
+[
+    {
+        "img": "/src/assets/img/h2ovoda.png",
+        "alt": "Innovative tech platform",
+        "site": "https://randomtechsite.com/",
+        "title": "Tech Innovations",
+        "badge_props": [
+            {
+                "text": "Python"
+            },
+            {
+                "text": "Django"
+            },
+            {
+                "text": "SQL"
+            }
+        ],
+        "tech_stack": [
+            {
+                "text": "Flask",
+                "alt": "flask",
+                "href": "https://flask.palletsprojects.com/"
+            },
+            {
+                "text": "Bootstrap",
+                "alt": "bootstrap",
+                "href": "https://getbootstrap.com/"
+            }
+        ],
+        "description": "Developed a cutting-edge platform for managing tech operations with real-time analytics and automated workflows. The site features an intuitive admin panel and seamless user interactions."
+    },
+    {
+        "img": "/src/assets/img/ov-main.png",
+        "alt": "Tech Enthusiast Hub",
+        "site": "https://techenthusiast.com/",
+        "title": "Tech Explorer",
+        "badge_props": [
+            {
+                "text": "React"
+            },
+            {
+                "text": "Node.js"
+            },
+            {
+                "text": "MongoDB"
+            }
+        ],
+        "tech_stack": [
+            {
+                "text": "Next.js",
+                "alt": "next.js",
+                "href": "https://nextjs.org/"
+            }
+        ],
+        "description": "A versatile platform for tech enthusiasts to share projects and insights. Features an advanced comment system and real-time data visualization to enhance user engagement."
+    },
+    {
+        "img": "/src/assets/img/water-website.png",
+        "alt": "Retro Tech Site",
+        "site": "https://retro-tech.com/",
+        "title": "Vintage Tech Showcase",
+        "badge_props": [
+            {
+                "text": "R"
+            },
+            {
+                "text": "PostgreSQL"
+            }
+        ],
+        "tech_stack": [
+            {
+                "text": "R",
+                "alt": "r",
+                "href": "https://www.r-project.org/"
+            }
+        ],
+        "description": "A platform dedicated to showcasing vintage tech gadgets and their histories. Includes user-submitted reviews and a comprehensive archive of classic technology."
+    },
+    {
+        "img": "/src/assets/img/online-store-byshikat.png",
+        "alt": "Fashion Retailer",
+        "site": "https://fashion-retailer.com/",
+        "title": "Modern Fashion Hub",
+        "badge_props": [
+            {
+                "text": "PHP"
+            },
+            {
+                "text": "Laravel"
+            },
+            {
+                "text": "MySQL"
+            },
+            {
+                "text": "Vue.js"
+            },
+            {
+                "text": "Sass"
+            }
+        ],
+        "tech_stack": [
+        ],
+        "description": "Created an e-commerce platform for a fashion retailer. Features personalized shopping experiences, real-time inventory tracking, and a streamlined checkout process."
+    },
+    {
+        "img": "/src/assets/img/online-store-lmd.png",
+        "alt": "Online Marketplace",
+        "site": "https://marketplace.com/",
+        "source": "https://github.com/random",
+        "title": "Marketplace Platform",
+        "badge_props": [
+            {
+                "text": "Java"
+            },
+            {
+                "text": "Docker"
+            }
+        ],
+        "tech_stack": [
+            {
+                "text": "Kubernetes",
+                "alt": "kubernetes",
+                "href": "https://kubernetes.io/"
+            }
+        ],
+        "description": "Developed a comprehensive online marketplace with advanced search capabilities, dynamic product listings, and robust security features."
+    }
+]

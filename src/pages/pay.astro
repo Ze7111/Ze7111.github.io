@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import { Image } from "astro:assets";
+import blur from "/src/assets/img/core/bg.png";
+
+export const prerender = true;
+
+let title = Astro.props;
+---
+
+<Head title="Pay" />
+<Layout class="relative">
+	<div class="grid mt-[11.1111%] content-center">
+		<Title text="Pay" />
+	</div>
+	<!-- ABOUT ME -->
+	<section class="grid px-3 lg:px-0 content-start text-white">
+		<Image
+			src={blur}
+			class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+			alt="blur background"
+		/>
+	</section>
+</Layout>

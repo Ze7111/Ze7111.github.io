@@ -1,0 +1,98 @@
+---
+import Icon from "@/components/Icon.astro";
+
+const IconType = {
+	VIEW: "view",
+	GIT: "git",
+  DOWNLOAD: "download",
+};
+
+const icons = {
+	[IconType.VIEW]: `
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z"
+        fill="currentColor"
+      />
+      <path
+        d="M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z"
+        fill="currentColor"
+      />
+    </svg>
+  `,
+	[IconType.GIT]: `
+    <svg
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     class="feather feather-github"
+    >
+      <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+        fill="currentColor"
+      />
+    </svg>
+  `,
+  [IconType.DOWNLOAD]: `
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 17V5"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 10L12 17L18 10"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  `,
+};
+
+let {
+	link,
+	text,
+	target,
+	showIcon = true,
+	disabled = false,
+	reason = "",
+	iconType = IconType.VIEW,
+} = Astro.props;
+
+let selectedIcon = icons[iconType];
+
+target = target || "_blank";
+---
+
+<a
+	href={disabled ? undefined : link}
+	target={disabled ? undefined : target}
+	class={`inline-flex items-center justify-self-start px-3 py-2 rounded-lg border-2 ${disabled ? "blur-bg cursor-not-allowed border-0 text-gray-500" : "hover:border-primary-0 hover:bg-primary-0 duration-150"}`}
+	style={disabled ? "pointer-events: none;" : ""}
+	aria-disabled={disabled}
+>
+	{text}
+	{showIcon && <Icon iconHTML={selectedIcon} />}
+</a>
+{disabled && reason && <span class="text-xs text-gray-500 pl-4">{reason}</span>}

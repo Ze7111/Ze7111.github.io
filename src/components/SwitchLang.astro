@@ -1,0 +1,26 @@
+<select id="langSelect" class="lang-selector">
+	<option value="en">en</option>
+</select>
+
+<script type="text/javascript">
+	let selectedLang = document.cookie.replace(
+		/(?:(?:^|.*;\s*)selectedLang\s*\=\s*([^;]*).*$)|^.*$/,
+		"$1"
+	);
+	if (!selectedLang) {
+		selectedLang = "en";
+		document.cookie = "selectedLang=" + selectedLang + "; path=/";
+	}
+	const langSelect = document.getElementById("langSelect");
+	if (langSelect) {
+		langSelect.value = selectedLang;
+		langSelect.onchange = function () {
+			document.cookie = "selectedLang=" + this.value + "; path=/";
+			let newPath = window.location.pathname.replace(/\/[a-z]{2}\//, "/" + this.value + "/");
+			if (newPath.includes("/blog/")) {
+				newPath = newPath.substring(0, newPath.indexOf("/blog/") + 6);
+			}
+			window.location.href = newPath;
+		};
+	}
+</script>
